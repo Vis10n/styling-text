@@ -7,7 +7,7 @@ class Result extends Component {
         this.state = {
             content: 'Some content here :D'
         }
-        this.handleChangeContent = this.handleChangeContent.bind(this);
+        this.handleChangeText = this.handleChangeText.bind(this);
     }
     
 
@@ -18,7 +18,7 @@ class Result extends Component {
         };
     }
     
-    handleChangeContent(event){
+    handleChangeText(event){
         event.target.value === '' ?
         this.setState({
             content: "some content :D"
@@ -40,7 +40,7 @@ class Result extends Component {
                 <input 
                     type="text" 
                     id="inp-content" 
-                    onChange={this.handleChangeContent}
+                    onChange={this.handleChangeText}
                     placeholder="Input some text here :D"
                     style={this.setStyle()}></input>
             </div>

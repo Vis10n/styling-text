@@ -8,13 +8,14 @@ class ColorPicker extends Component {
             colors: ['red', 'green', 'blue', 'grey']
         }
     }
-
+    //TODO Hien thi mau sac trong span
     showColor(color) {
         return {
             backgroundColor: color,
         };
     }
 
+    //TODO Hien thi mau dang chon
     setActiveColor(color) {
         this.props.onReivColor(color)
     }
