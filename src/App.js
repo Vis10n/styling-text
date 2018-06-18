@@ -15,6 +15,7 @@ class App extends Component {
     };
     this.onSetColor = this.onSetColor.bind(this);
     this.onChangeSize = this.onChangeSize.bind(this);
+    this.onSetDefault = this.onSetDefault.bind(this);
   }
   
   onSetColor(params) {
@@ -29,6 +30,15 @@ class App extends Component {
     });
   }
   
+  onSetDefault(value) {
+    if (value) {
+      this.setState({
+        color: 'red',
+        fontSize: 12
+      });
+    }
+  }
+
   render() {
     return (
       <div className="container mt-50">
@@ -44,7 +54,7 @@ class App extends Component {
               fontSize={this.state.fontSize}
               onChangeSize={this.onChangeSize}
             />
-            <Reset />
+            <Reset onSetDefault={this.onSetDefault}/>
             <hr/>
           </div>
           <Result
