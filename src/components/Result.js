@@ -14,6 +14,7 @@ class Result extends Component {
     setStyle(){
         return {
             color: this.props.color,
+            fontSize: this.props.fontSize,
             borderColor: this.props.color
         };
     }
@@ -32,7 +33,7 @@ class Result extends Component {
     render() {
         return (
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <p> Color: {this.props.color} - Fontsize: 15px </p>
+                <p> Color: {this.props.color} - Size: {this.props.fontSize}px </p>
                 <div id="out-content" style={this.setStyle()} >
                     {this.state.content}
                 </div>
@@ -41,8 +42,7 @@ class Result extends Component {
                     type="text" 
                     id="inp-content" 
                     onChange={this.handleChangeText}
-                    placeholder="Input some text here :D"
-                    style={this.setStyle()}></input>
+                    placeholder="Input some text here :D"></input>
             </div>
         );
     }
